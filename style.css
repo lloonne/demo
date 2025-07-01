@@ -1,0 +1,279 @@
+/* Variáveis de Cores */
+:root {
+    --mega-orange: #FF8C00;
+    --mega-green: #6B8E23;
+    --mega-white: #FFFFFF;
+    --mega-dark: #333333;
+    --mega-light-gray: #f4f4f4;
+    --mega-gray: #666;
+}
+
+/* Reset Básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--mega-dark);
+    background: var(--mega-white);
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+    padding: 20px 0;
+}
+
+/* Header */
+header {
+    background: var(--mega-white);
+    color: var(--mega-dark);
+    padding: 1rem 0;
+    border-bottom: 1px solid #eee;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+}
+
+header .logo img {
+    height: 50px;
+    margin-right: 10px;
+}
+
+header .logo h1 {
+    font-size: 1.8rem;
+    color: var(--mega-dark);
+}
+
+header nav ul {
+    list-style: none;
+}
+
+header nav ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    color: var(--mega-dark);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: var(--mega-orange);
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(to right, var(--mega-orange), var(--mega-green));
+    color: var(--mega-white);
+    text-align: center;
+    padding: 100px 0;
+}
+
+.hero h2 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    background: var(--mega-dark);
+    color: var(--mega-white);
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: var(--mega-gray);
+}
+
+/* Seções Gerais */
+section {
+    padding: 80px 0;
+    text-align: center;
+}
+
+section:nth-child(even) {
+    background: var(--mega-light-gray);
+}
+
+section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: var(--mega-dark);
+}
+
+/* Quem Somos */
+.about p {
+    max-width: 800px;
+    margin: 0 auto 20px auto;
+    font-size: 1.1rem;
+}
+
+/* Localização */
+.location-info p {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.location-info i {
+    color: var(--mega-orange);
+    margin-right: 10px;
+}
+
+.map-placeholder {
+    background: #ddd;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    border-radius: 8px;
+}
+
+/* Contato */
+.contact-info p {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.contact-info i {
+    color: var(--mega-green);
+    margin-right: 10px;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 40px auto 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form .btn {
+    background: var(--mega-green);
+    color: var(--mega-white);
+    border: none;
+    cursor: pointer;
+    padding: 12px 20px;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.contact-form .btn:hover {
+    background: #5a7d1e; /* Um tom mais escuro de verde */
+}
+
+/* Footer */
+footer {
+    background: var(--mega-dark);
+    color: var(--mega-white);
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9rem;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+    }
+
+    header nav ul li {
+        margin: 0 10px;
+    }
+
+    .hero h2 {
+        font-size: 2.5rem;
+    }
+
+    section h2 {
+        font-size: 2rem;
+    }
+
+    .about p, .location-info p, .contact-info p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header .logo h1 {
+        font-size: 1.5rem;
+    }
+
+    header nav ul {
+        padding-top: 10px;
+    }
+
+    header nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .hero h2 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .btn {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+
+    section {
+        padding: 50px 0;
+    }
+
+    section h2 {
+        font-size: 1.8rem;
+    }
+
+    .contact-form {
+        padding: 0 15px;
+    }
+}
+
